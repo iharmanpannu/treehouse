@@ -15,3 +15,12 @@ do {
   console.log("Hello");
 } while (false);
 console.log("Goodbye");
+
+// let counter = 0;
+
+// This creates a endless loop
+
+// while (counter >= 0) {
+//   console.log( 'Hello');
+//   counter += 1;
+// }
