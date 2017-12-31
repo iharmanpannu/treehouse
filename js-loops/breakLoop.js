@@ -1,8 +1,5 @@
-while (true) {
-  // this is an endless loop
-  break;
-  // but break, lets you "break out" of the loop
-}
+// while (true) {   // this is an endless loop   break;   // but break, lets you
+// "break out" of the loop }
 
 var randomNumber = getRandomNumber(10);
 var guess;
@@ -24,9 +21,7 @@ while (guessCount < 10) {
 }
 if (correctGuess) {
   document.write("<h1>You guessed the number!</h1>");
-  document.write(
-    "It took you " + guessCount + " tries to guess the number " + randomNumber
-  );
+  document.write("It took you " + guessCount + " tries to guess the number " + randomNumber);
 } else {
   document.write("<h1>Sorry wrong guess try again!</h1>");
 }
