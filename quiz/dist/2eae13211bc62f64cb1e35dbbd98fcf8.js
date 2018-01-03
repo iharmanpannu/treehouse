@@ -72,10 +72,9 @@ function print(message) {
 }
 
 var questions = [
-  ['President Of USA? '],
-  ['Last name of Barrack? '],
-  ['National animal of India?'],
-  ['trump', 'obama', 'tiger']
+  ['President Of USA? ', 'trump'],
+  ['Last name of Barrack? ', 'obama'],
+  ['National animal of India?', 'tiger']
 ];
 
 var correctAnswer = 0;
@@ -83,21 +82,24 @@ var question;
 var answers;
 var html;
 var response;
-var wrong;
 
-for (var i = 0; i < questions.length; i++) {
-  question = prompt(questions[i][0]);
-  answers = question[i][3];
-  response = question;
-  if (question === answers) {
-    correctAnswer++;
+function correctAns() {
+  for (var i = 0; i < questions.length; i++) {
+    question = prompt(questions[i][0]);
+    answers = question[i][3];
+    response = question;
+    if (question === answers) {
+      correctAnswer++;
+    }
   }
+  document.getElementById("para");
+  html = `You got ${correctAnswer} questions right! `;
 }
 
-document.getElementById('para');
-html = `You got ${correctAnswer} questions right! `
 
-print(html);
+
+
+print(correctAns(html));
 
 },{}],3:[function(require,module,exports) {
 "use strict";
