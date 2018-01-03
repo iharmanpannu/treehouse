@@ -4,13 +4,10 @@ function print(message) {
 }
 
 var questions = [
-  [
-    'President Of USA? ', 'trump'
-  ],
-  [
-    'Last name of Barrack? ', 'obama'
-  ],
-  ['National animal of India? ', 'tiger']
+  ['President Of USA? '],
+  ['Last name of Barrack? '],
+  ['National animal of India?'],
+  ['trump', 'obama', 'tiger']
 ];
 
 var correctAnswer = 0;
@@ -22,7 +19,7 @@ var wrong;
 
 for (var i = 0; i < questions.length; i++) {
   question = prompt(questions[i][0]);
-  answers = questions[i][1];
+  answers = question[i][3];
   response = question;
   if (question === answers) {
     correctAnswer++;
