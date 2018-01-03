@@ -2,14 +2,18 @@ function print(message) {
   document.write(message);
 }
 
-var questions = [
-  ['How is your day going so far '],
-  ['How old are you? ']
+function askQuestion(answers) {
+  let questions = [
+  ['President Of USA? '],
+  ['Last name of Barrack? ']
 ];
+  let firstQuestion =  questions[0][0];
+  // let secondQuestion = prompt(questions[1][0]);
 
-function askQuestion() {
-  prompt(questions[0][0]);
-  prompt(questions[1][0]);
+  if (prompt(firstQuestion) === 'trump' || 'me') {
+    console.log(`<p>You answer is right!</p>`);
+  } else {
+    console.log(`<p>Wrong! Try Again</p>`);
+  }
 }
-
-console.log('Hello');
+askQuestion();

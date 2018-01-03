@@ -65,27 +65,32 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({6:[function(require,module,exports) {
+})({5:[function(require,module,exports) {
 function print(message) {
   document.write(message);
 }
 
-var questions = [
-  ['How is your day going so far '],
-  ['How old are you? ']
+function askQuestion(answers) {
+  let questions = [
+  ['President Of USA? '],
+  ['Last name of Barrack? ']
 ];
+  let firstQuestion =  questions[0][0];
+  // let secondQuestion = prompt(questions[1][0]);
 
-function askQuestion() {
-  prompt(questions[0][0]);
-  prompt(questions[1][0]);
+  if (prompt(firstQuestion) === 'trump' || 'me') {
+    console.log(`<p>You answer is right!</p>`);
+  } else {
+    console.log(`<p>Wrong! Try Again</p>`);
+  }
 }
+askQuestion();
 
-console.log('Hello');
-},{}],4:[function(require,module,exports) {
+},{}],3:[function(require,module,exports) {
 "use strict";
 
 require("./quiz");
-},{"./quiz":6}],0:[function(require,module,exports) {
+},{"./quiz":5}],0:[function(require,module,exports) {
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
 function Module() {
@@ -103,7 +108,7 @@ function Module() {
 module.bundle.Module = Module;
 
 if (!module.bundle.parent) {
-  var ws = new WebSocket('ws://localhost:51355/');
+  var ws = new WebSocket('ws://localhost:57812/');
   ws.onmessage = function(event) {
     var data = JSON.parse(event.data);
 
@@ -201,4 +206,4 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id)
   });
 }
-},{}]},{},[0,4])
+},{}]},{},[0,3])
