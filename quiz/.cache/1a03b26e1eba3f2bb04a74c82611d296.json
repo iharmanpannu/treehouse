@@ -1,1 +1,1 @@
-{"dependencies":[],"generated":{"js":"function print(message) {\n  document.write(message);\n}\n\nvar questions = [\n  ['How is your day going so far'],\n  []\n]\n\nconsole.log('Hello');"},"hash":"86fc810996d1bb32164b975b5bd2cdd7"}
+{"dependencies":[],"generated":{"js":"function print(message) {\n  document.write(message);\n}\n\nvar questions = [\n  ['How is your day going so far '],\n  ['How old are you? ']\n];\n\nfunction askQuestion() {\n  prompt(questions[0][0]);\n  prompt(questions[1][0]);\n}\n\nconsole.log('Hello');"},"hash":"f82b5a9226391231561a03ebc5e2fbf4"}
