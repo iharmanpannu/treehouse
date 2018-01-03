@@ -1,1 +1,1 @@
-{"dependencies":[],"generated":{"js":"console.log('Hello World');\ndocument.getElementById('quiz');"},"hash":"57452dd9198b62f52d986c80a8a610d1"}
+{"dependencies":[],"generated":{"js":"function print(message) {\n  document.write(message);\n}\n\nconsole.log('Hello');"},"hash":"f058ed148b27fb39e5897b5d113270cb"}

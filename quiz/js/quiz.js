@@ -1,2 +1,5 @@
-console.log('Hello World');
-document.getElementById('quiz');
+function print(message) {
+  document.write(message);
+}
+
+console.log('Hello');
