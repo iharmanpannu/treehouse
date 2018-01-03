@@ -65,9 +65,14 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({4:[function(require,module,exports) {
+})({6:[function(require,module,exports) {
 console.log('Hello World');
-},{}],0:[function(require,module,exports) {
+document.getElementById('quiz');
+},{}],4:[function(require,module,exports) {
+"use strict";
+
+require("./quiz");
+},{"./quiz":6}],0:[function(require,module,exports) {
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
 function Module() {
