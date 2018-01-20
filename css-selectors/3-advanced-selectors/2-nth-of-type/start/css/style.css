@@ -14,3 +14,11 @@ div:nth-last-of-type(5n + 1) {
     background: #beb0ff;
     color: white;
 }
+
+:root {
+    background: lightblue;
+}
+
+:target {
+    background: #beb0ff;
+}

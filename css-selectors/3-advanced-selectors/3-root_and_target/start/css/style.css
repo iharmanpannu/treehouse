@@ -1,0 +1,14 @@
+:root {
+    background: lightblue;
+}
+
+:target {
+    background: #beb0ff;
+    color: white;
+}
+
+#col-c:target {
+    background: #00d0ff;
+    color: white;
+    box-shadow: 10px 10px 20px rgb(2, 255, 2);
+}
