@@ -72,4 +72,14 @@ a[target="_blank"] {
         width: auto;
         display: inline-block;
     }
+    .btn+.btn {
+        margin-left: 20px;
+    }
+}
+
+
+/* Combinators  */
+
+form>a {
+    font-size: .7em;
 }
