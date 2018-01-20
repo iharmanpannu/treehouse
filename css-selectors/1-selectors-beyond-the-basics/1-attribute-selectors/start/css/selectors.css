@@ -21,12 +21,6 @@ input[type="email"] {
     background: antiquewhite;
 }
 
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-    cursor: pointer;
-}
-
 a[target="_blank"] {
     color: tomato;
     text-decoration: none;
@@ -47,4 +41,35 @@ a[target="_blank"] {
 
 .rounded {
     border-radius: 50%;
+}
+
+.btn {
+    cursor: pointer;
+    font-size: .875em;
+    font-weight: 400;
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    opacity: .75;
+}
+
+.default {
+    background: #52bab3;
+}
+
+.error {
+    background: #fd6c40;
+}
+
+
+/* Media queries  */
+
+@media (min-width: 769px) {
+    .inln {
+        width: auto;
+        display: inline-block;
+    }
 }
