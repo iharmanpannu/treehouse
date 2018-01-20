@@ -23,6 +23,13 @@
             <input type="email" id="mail" name="user_email">
             <label for="password">Password</label>
             <input type="password" id="password" name="user_password">
+            <label for="">Age:</label>
+            <input type="radio" id="under_13" value="under_13" name="user_age">
+            <label for="under_13" class="light">Under 13</label>
+            <br>
+            <input type="radio" id="over_13" value="over_13" name="user_age">
+            <label for="over_13" class="light">13 or Older</label>
+
         </fieldset>
         <fieldset>
             <legend> <span class="number">2</span> Your profile</legend>
@@ -43,8 +50,21 @@
         </fieldset>
         <button type="submit">Sign Up</button>
 
-    </form>
 
+
+    </form>
+    <select name="shirt_color" id="color">
+  <optgroup>
+    <option value="red">Red</option>
+    <option value="yellow">Yellow</option>
+    <option value="purple">Purple</option>
+    <option value="blue">Blue</option>
+    <option value="green">Green</option>
+    <option value="orange">Orange</option>
+  </optgroup>
+</select>
+
+    <button type="submit">Place Order</button>
 </body>
 
 </html>
