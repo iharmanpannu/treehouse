@@ -32,3 +32,19 @@ a[target="_blank"] {
     text-decoration: none;
     border-bottom: 1px solid tomato;
 }
+
+
+/* DRY classes  */
+
+.br {
+    border-radius: .5em;
+}
+
+.avatar {
+    display: block;
+    margin: 0 auto 2em;
+}
+
+.rounded {
+    border-radius: 50%;
+}
