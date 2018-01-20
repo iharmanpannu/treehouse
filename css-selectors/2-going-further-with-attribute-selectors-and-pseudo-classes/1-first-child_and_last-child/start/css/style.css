@@ -1,2 +1,15 @@
 /* Structural Pseudo-classes------------------ */
 
+li:first-child {
+    color: red;
+}
+
+li:last-child {
+    color: red;
+    border: none;
+}
+
+li:nth-child(2n) {
+    color: green;
+    background: gray;
+}
