@@ -83,3 +83,9 @@ a[target="_blank"] {
 form>a {
     font-size: .7em;
 }
+
+h1~label {
+    background: tomato;
+    color: white;
+    padding: 5px;
+}
