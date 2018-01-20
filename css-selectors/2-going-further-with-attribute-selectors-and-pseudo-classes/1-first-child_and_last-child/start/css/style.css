@@ -11,5 +11,17 @@ li:last-child {
 
 li:nth-child(2n) {
     color: green;
-    background: gray;
+    background: rgb(157, 152, 152);
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+span:only-child {
+    color: aqua;
+    padding: 0 10px;
+}
+
+:empty {
+    background: yellow;
 }
