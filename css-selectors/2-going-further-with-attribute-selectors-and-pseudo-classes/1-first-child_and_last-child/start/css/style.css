@@ -1,27 +1,2 @@
 /* Structural Pseudo-classes------------------ */
 
-li:first-child {
-    color: red;
-}
-
-li:last-child {
-    color: red;
-    border: none;
-}
-
-li:nth-child(2n) {
-    color: green;
-    background: rgb(157, 152, 152);
-    border: none;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-
-span:only-child {
-    color: aqua;
-    padding: 0 10px;
-}
-
-:empty {
-    background: yellow;
-}

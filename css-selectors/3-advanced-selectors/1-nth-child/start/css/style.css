@@ -1,19 +1,2 @@
 /* :nth-child Pseudo-classes------------------ */
 
-
-/* li:nth-child(odd) {
-    background: aquamarine;
-}
-
-li:nth-child(even) {
-    background: rgb(245, 139, 127);
-} */
-
-li:nth-child(2n + 4) {
-    background: tomato;
-}
-
-li:nth-child(-n + 2) {
-    background: rgb(0, 110, 255);
-    color: white;
-}

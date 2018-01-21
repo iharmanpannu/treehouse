@@ -1,24 +1,6 @@
 /* Structural Pseudo-classes------------------ */
 
-div:nth-child(3) {
-    background: #333233;
-    color: white;
-}
-
-div:nth-of-type(4) {
-    background: #52bab3;
-    color: white;
-}
-
-div:nth-last-of-type(5n + 1) {
-    background: #beb0ff;
-    color: white;
-}
-
-:root {
-    background: lightblue;
-}
-
-:target {
-    background: #beb0ff;
+div:nth-child(4) {
+  background: #52bab3;
+  color: white;
 }
