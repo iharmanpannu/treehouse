@@ -2,7 +2,8 @@
   Flexbox
 ==================================== */
 
-.container {
+
+/* .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -10,4 +11,26 @@
 
 .item-1 {
     margin-right: auto;
+    order: 3;
+}
+
+.item-6 {
+    order: -1;
+}
+
+.item-5 {
+    order: -2;
+} */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    flex-grow: 1;
+}
+
+.item-1 {
+    flex-grow: 2;
 }
