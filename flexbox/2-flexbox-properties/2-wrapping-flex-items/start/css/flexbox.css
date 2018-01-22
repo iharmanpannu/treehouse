@@ -3,5 +3,11 @@
 ==================================== */
 
 .container {
-	display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.item-1 {
+    margin-right: auto;
 }
