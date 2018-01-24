@@ -6,5 +6,7 @@ const sayName = () => {
 }
 
 const sayBye = () => {
-  console.log("Bye " + name);  
+    console.log("Bye " + name);
 }
+
+const
