@@ -7,11 +7,16 @@ const button = document.querySelector('button');
 
 
 toggleList.addEventListener("click", () => {
-    if (listDiv.style.display === "none") {
-        listDiv.style.display = "block";
-    } else {
-        listDiv.style.display = "none";
-    }
+    //ternary Operator style
+    listDiv.style.display === "none" ?
+        (listDiv.style.display = "block") :
+        (listDiv.style.display = "none");
+
+    // if (listDiv.style.display === "none") {
+    //     listDiv.style.display = "block";
+    // } else {
+    //     listDiv.style.display = "none";
+    // }
 
 })
 
