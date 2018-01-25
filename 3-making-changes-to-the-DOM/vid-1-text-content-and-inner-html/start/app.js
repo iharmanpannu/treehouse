@@ -30,6 +30,16 @@ button.addEventListener('click', () => {
     p.innerHTML = input.value + ' :';
 })
 
+const a = {
+    currentVal: 0,
+    valueOf: function() {
+        return this.currentVal += 1
+    }
+};
+const equality = (
+    a === 1 && a == 2 && a == 3
+);
 
+console.log(equality);
 
 // p.title = "List Description";
