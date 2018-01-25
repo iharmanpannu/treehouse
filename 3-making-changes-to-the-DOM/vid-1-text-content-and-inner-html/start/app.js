@@ -9,8 +9,8 @@ const button = document.querySelector('button');
 toggleList.addEventListener("click", () => {
     //ternary Operator style
     listDiv.style.display === "none" ?
-        (listDiv.style.display = "block") :
-        (listDiv.style.display = "none");
+        ((listDiv.style.display = "block"), (toggleList.textContent = "Hide List")) :
+        ((toggleList.textContent = "Show List"), (listDiv.style.display = "none"));
 
     // if (listDiv.style.display === "none") {
     //     listDiv.style.display = "block";
