@@ -75,5 +75,5 @@ function getRandomColor() {
 // }
 
 
-const evens = document.getElementsByClassName('hello');
-evens.style.backgroundColor = getRandomColor();
+const evens = document.querySelectorAll('.hello');
+evens.style.color = getRandomColor();
