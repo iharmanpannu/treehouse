@@ -7,11 +7,12 @@ const button = document.querySelector('button');
 
 
 toggleList.addEventListener("click", () => {
-    if () {
+    if (listDiv.style.display === "none") {
         listDiv.style.display = "block";
     } else {
         listDiv.style.display = "none";
     }
+
 })
 
 
