@@ -1,10 +1,15 @@
 const toggleList = document.getElementById('toggleList');
 const listDiv = document.querySelector('.list');
 
+
 const input = document.querySelector("input.description");
-const p = document.querySelector('p.description');
+const descritionP = document.querySelector("p.description");
 // const button = document.querySelector('#btn'); // Both Ways Works
-const button = document.querySelector("button.description");
+const descritionButton = document.querySelector("button.description");
+const addItemInput = document.querySelector('input.addItemInput');
+const addItemButton = document.querySelector('button.addItemButton');
+const removeItemButton = document.querySelector('button.removeItemButton');
+
 
 
 toggleList.addEventListener("click", () => {
@@ -26,20 +31,29 @@ toggleList.addEventListener("click", () => {
 // button.addEventListener('click', () => {
 //     p.textContent = input.value + ' :';
 // })
-button.addEventListener('click', () => {
-    p.innerHTML = input.value + ' :';
-})
+descritionButton.addEventListener("click", () => {
+    descritionP.innerHTML = input.value + " :";
+    input.value = '';
+});
 
-const a = {
-    currentVal: 0,
-    valueOf: function() {
-        return this.currentVal += 1
-    }
-};
-const equality = (
-    a === 1 && a == 2 && a == 3
-);
 
-console.log(equality);
 
 // p.title = "List Description";
+
+
+
+addItemButton.addEventListener('click', () => {
+    let ul = document.getElementsByTagName('ul')[0];
+    let li = document.createElement('li');
+    li.innerHTML = addItemInput.value;
+    ul.appendChild(li);
+    addItemInput.value = '';
+    li.className = "newClass";
+})
+
+
+removeItemButton.addEventListener('click', () => {
+    let ul = document.getElementsByTagName("ul")[0];
+    let li = document.createElement("li");
+
+})
