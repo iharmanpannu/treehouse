@@ -54,6 +54,6 @@ addItemButton.addEventListener('click', () => {
 
 removeItemButton.addEventListener('click', () => {
     let ul = document.getElementsByTagName("ul")[0];
-    let li = document.createElement("li");
-
+    let li = document.querySelector('li:last-child');
+    ul.removeChild(li);
 })
