@@ -6,7 +6,9 @@ const p = document.querySelector('p.description');
 const button = document.querySelector('button');
 
 
+
 toggleList.addEventListener("click", () => {
+
     //ternary Operator style
     listDiv.style.display === "none" ?
         ((listDiv.style.display = "block"), (toggleList.textContent = "Hide List")) :
@@ -20,15 +22,15 @@ toggleList.addEventListener("click", () => {
 
 })
 
-
+button.addEventListener("click", () => {
+    p.innerHTML = input.value + " :";
+});
 
 
 // button.addEventListener('click', () => {
 //     p.textContent = input.value + ' :';
 // })
-button.addEventListener('click', () => {
-    p.innerHTML = input.value + ' :';
-})
+
 
 
 
