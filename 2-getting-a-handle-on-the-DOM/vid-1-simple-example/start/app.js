@@ -67,9 +67,13 @@ function getRandomColor() {
 
 
 
-const evens = document.querySelectorAll('li:nth-child(odd), p');
-// const evens = document.querySelectorAll('li', );
+// const evens = document.querySelectorAll('li:nth-child(odd), p');
+// // const evens = document.querySelectorAll('li', );
 
-for (let i = 0; i < evens.length; i++) {
-    evens[i].style.backgroundColor = getRandomColor();
-}
+// for (let i = 0; i < evens.length; i++) {
+//     evens[i].style.backgroundColor = getRandomColor();
+// }
+
+
+const evens = document.getElementsByClassName('hello');
+evens.style.backgroundColor = getRandomColor();
