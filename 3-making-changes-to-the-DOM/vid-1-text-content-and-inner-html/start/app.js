@@ -6,9 +6,12 @@ const p = document.querySelector('p.description');
 const button = document.querySelector('button');
 
 
-toggleList.addEventListener("click", () => { ?
-    listDiv.style.display = "block"; :
-    listDiv.style.display = "none";
+toggleList.addEventListener("click", () => {
+    if () {
+        listDiv.style.display = "block";
+    } else {
+        listDiv.style.display = "none";
+    }
 })
 
 
