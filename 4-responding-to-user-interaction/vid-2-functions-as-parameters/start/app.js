@@ -6,7 +6,7 @@ const descriptionButton = document.querySelector('button.description');
 const addItemInput = document.querySelector('input.addItemInput');
 const addItemButton = document.querySelector('button.addItemButton');
 const removeItemButton = document.querySelector('button.removeItemButton');
-// const listItems = document.querySelectorAll('li')
+// const listItems = document.querySelectorAll('li');
 
 toggleList.addEventListener('click', () => {
     if (listDiv.style.display == 'none') {
@@ -38,16 +38,18 @@ removeItemButton.addEventListener('click', () => {
 });
 
 
-listDiv.addEventListener("mouseover", () => {
-    listItems.style.textTransform = 'uppercase';
+// listDiv.addEventListener("mouseover", () => {
+//     listItems.style.textTransform = 'uppercase';
+// })
+
+// listDiv.addEventListener("mouseout", () => {
+//     listItems.style.textTransform = "lowercase";
+// })
+
+
+document.addEventListener('click', (event) => {
+    console.log(event.target);
 })
-
-listDiv.addEventListener("mouseout", () => {
-    listItems.style.textTransform = "lowercase";
-})
-
-
-
 
 
 
