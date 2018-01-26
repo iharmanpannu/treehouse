@@ -38,10 +38,32 @@ removeItemButton.addEventListener('click', () => {
 });
 
 
-
-listDiv.addEventListener('mouseover', (event) => {
-    document.querySelectorAll('li').innerHTML = event.target.innerHTML.toUpperCase();
+// Ternary Operator way 
+listDiv.addEventListener('mouseover', (e) => {
+    (event.target.tagName === 'LI') ?
+    (e.target.style.textTransform = 'uppercase') :
+    (e.target = '')
 })
+
+listDiv.addEventListener('mouseout', (e) => {
+    (event.target.tagName === 'LI') ?
+    (e.target.style.textTransform = 'lowercase') :
+    (e.target = '')
+})
+
+// normal if statement 
+listDiv.addEventListener('mouseover', (e) => {
+    if (event.target.tagName === 'LI') {
+        (e.target.style.textTransform = 'uppercase')
+    }
+})
+
+listDiv.addEventListener('mouseout', (e) => {
+    if (event.target.tagName === "LI") {
+        e.target.style.textTransform = "lowercase";
+    }
+})
+
 
 
 
