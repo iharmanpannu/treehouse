@@ -38,18 +38,21 @@ removeItemButton.addEventListener('click', () => {
 });
 
 
-// listDiv.addEventListener("mouseover", () => {
-//     listItems.style.textTransform = 'uppercase';
-// })
+
+listDiv.addEventListener('mouseover', (event) => {
+    document.querySelectorAll('li').innerHTML = event.target.innerHTML.toUpperCase();
+})
+
+
 
 // listDiv.addEventListener("mouseout", () => {
 //     listItems.style.textTransform = "lowercase";
 // })
 
 
-document.addEventListener('click', (event) => {
-    console.log(event.target);
-})
+// document.addEventListener('click', (event) => {
+//     console.log(event.target);
+// })
 
 
 
