@@ -6,7 +6,7 @@ const descriptionButton = document.querySelector('button.description');
 const addItemInput = document.querySelector('input.addItemInput');
 const addItemButton = document.querySelector('button.addItemButton');
 const removeItemButton = document.querySelector('button.removeItemButton');
-const listItems = document.querySelectorAll('li')
+// const listItems = document.querySelectorAll('li')
 
 toggleList.addEventListener('click', () => {
     if (listDiv.style.display == 'none') {
@@ -37,6 +37,20 @@ removeItemButton.addEventListener('click', () => {
     ul.removeChild(li);
 });
 
+
+listDiv.addEventListener("mouseover", () => {
+    listItems.style.textTransform = 'uppercase';
+})
+
+listDiv.addEventListener("mouseout", () => {
+    listItems.style.textTransform = "lowercase";
+})
+
+
+
+
+
+
 // listItems.addEventListener("mouseover", () => {
 //     listItems.style.textTransform = 'uppercase';
 // })
@@ -45,12 +59,12 @@ removeItemButton.addEventListener('click', () => {
 //     listItems.style.textTransform = "lowercase";
 // }) 
 
-for (let i = 0; i < listItems.length; i++) {
-    listItems[i].addEventListener('mouseover', () => {
-        listItems[i].textContent = listItems[i].textContent.toUpperCase();
+// for (let i = 0; i < listItems.length; i++) {
+//     listItems[i].addEventListener('mouseover', () => {
+//         listItems[i].textContent = listItems[i].textContent.toUpperCase();
 
-        listItems[i].addEventListener("mouseout", () => {
-            listItems[i].textContent = listItems[i].textContent.toLowerCase();
-        })
-    })
-}
+//         listItems[i].addEventListener("mouseout", () => {
+//             listItems[i].textContent = listItems[i].textContent.toLowerCase();
+//         })
+//     })
+// }
