@@ -8,11 +8,11 @@ const addItemButton = document.querySelector("button.addItemButton");
 const removeItemButton = document.querySelector("button.removeItemButton");
 
 listDiv.addEventListener("mouseover", e => {
-  e.target.listItems.textContent = listItems.textContent.toUpperCase();
+  e.target.tagName.textContent = "LI".textContent.toUpperCase();
 });
-listDiv.addEventListener("mouseout", e => {
-  listItems.textContent = listItems.textContent.toLowerCase();
-});
+// listDiv.addEventListener("mouseout", e => {
+//   listItems.textContent = listItems.textContent.toLowerCase();
+// });
 
 toggleList.addEventListener("click", () => {
   if (listDiv.style.display == "none") {
