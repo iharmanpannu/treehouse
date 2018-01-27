@@ -23,8 +23,22 @@ listUl.addEventListener("click", e => {
         ul.insertBefore(li, preli);
       }
     }
+    if (event.target.className === "down") {
+      let li = e.target.parentNode;
+      let nextLi = li.nextElementSibling;
+      let ul = li.parentNode;
+      if (nextLi) {
+        ul.insertBefore(li, nextLi);
+      }
+    }
   }
 });
+
+// listDiv.addEventListener("click", e => {
+//   if (event.target.tagName === "BUTTON") {
+
+//   }
+// });
 
 // listDiv.addEventListener('mouseover', (event) => {
 //   if (event.target.tagName == 'LI') {
