@@ -10,9 +10,19 @@ const listUl = document.querySelector("ul");
 
 listUl.addEventListener("click", e => {
   if (event.target.tagName === "BUTTON") {
-    let li = e.target.parentNode;
-    let ul = li.parentNode;
-    ul.removeChild(li);
+    if (event.target.className === "remove") {
+      let li = e.target.parentNode;
+      let ul = li.parentNode;
+      ul.removeChild(li);
+    }
+    if (event.target.className === "up") {
+      let li = e.target.parentNode;
+      let preli = li.previousElementSibling;
+      let ul = li.parentNode;
+      if (preli) {
+        ul.insertBefore(li, preli);
+      }
+    }
   }
 });
 
