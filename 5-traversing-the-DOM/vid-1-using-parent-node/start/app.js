@@ -8,6 +8,11 @@ const addItemButton = document.querySelector("button.addItemButton");
 // const removeItemButton = document.querySelector("button.removeItemButton");
 const listUl = document.querySelector("ul");
 const lis = listUl.children;
+const firstListItem = listUl.firstElementChild;
+const lastListItem = listUl.lastElementChild;
+
+firstListItem.style.backgroundColor = "#EB9561";
+lastListItem.style.backgroundColor = "#FDEBD4";
 
 function attachListItemButtons(li) {
   let up = document.createElement("button");
