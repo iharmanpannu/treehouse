@@ -1,16 +1,19 @@
 const form = document.getElementById("registrar");
 const input = document.querySelector("input");
 const ul = document.getElementById("invitedList");
-const li = document.createElement("li");
 
 //This function cretes a list Items
 function createLI(text) {
-  const button = document.createElement("button");
+  const li = document.createElement("li");
+  const span = document.createElement("span");
+  const removeButton = document.createElement("button");
   const label = document.createElement("label");
   const checkBox = document.createElement("input");
   const editButton = document.createElement("button");
 
-  li.textContent = text;
+  // List text
+  span.textContent = text;
+  li.appendChild(span);
   // Item Label
   label.textContent = "Confirmed";
   label.appendChild(checkBox);
@@ -22,8 +25,8 @@ function createLI(text) {
   editButton.textContent = "Edit";
   li.appendChild(editButton);
   //Remove Button
-  button.textContent = "Remove";
-  li.appendChild(button);
+  removeButton.textContent = "Remove";
+  li.appendChild(removeButton);
   return li;
 }
 
@@ -34,7 +37,7 @@ form.addEventListener("submit", e => {
   const li = createLI(text);
   ul.appendChild(li);
 });
-// Class to change color on checkBox Clicked
+// Change Button
 ul.addEventListener("change", e => {
   const checkbox = e.target;
   const checked = checkbox.checked;
@@ -43,8 +46,6 @@ ul.addEventListener("change", e => {
     ? (listItem.className = "responded")
     : (listItem.className = "");
 });
-
-// Remove Button
 ul.addEventListener("click", e => {
   if (event.target.tagName === "BUTTON") {
     if (event.target.textContent === "Remove") {
@@ -55,11 +56,26 @@ ul.addEventListener("click", e => {
   }
 });
 
-// Edit Button
+// Remove Button
 ul.addEventListener("click", e => {
-  if (event.target.tagName === "BUTTON") {
-    if (event.target.textContent === "Edit") {
-      li.textContent = input.value;
+  if (e.target.tagName === "BUTTON") {
+    const button = e.target;
+    const li = button.parentNode;
+    const ul = li.parentNode;
+    const span = li.firstElementChild;
+    const input = document.createElement("input");
+    if (button.textContent === "Remove") {
+      ul.removeChild(li);
+    } else if (button.textContent === "Edit") {
+      //Edit Button
+
+      input.type = "text";
+      input.value = span.textContent;
+      li.insertBefore(input, span);
+      li.removeChild(span);
+      button.textContent = "Save";
+    } else if (button.textContent === "Save") {
+      li.textContent = span.value;
     }
   }
 });
