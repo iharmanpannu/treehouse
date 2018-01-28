@@ -7,6 +7,28 @@ const addItemInput = document.querySelector("input.addItemInput");
 const addItemButton = document.querySelector("button.addItemButton");
 // const removeItemButton = document.querySelector("button.removeItemButton");
 const listUl = document.querySelector("ul");
+const lis = listUl.children;
+
+function attachListItemButtons(li) {
+  let up = document.createElement("button");
+  let down = document.createElement("button");
+  let remove = document.createElement("button");
+  up.className = "up";
+  up.textContent = "Up";
+  li.appendChild(up);
+
+  down.className = "down";
+  down.textContent = "Down";
+  li.appendChild(down);
+
+  remove.className = "remove";
+  remove.textContent = "Remove";
+  li.appendChild(remove);
+}
+
+for (let i = 0; i < lis.length; i++) {
+  attachListItemButtons(lis[i]);
+}
 
 listUl.addEventListener("click", e => {
   if (event.target.tagName === "BUTTON") {
@@ -31,6 +53,11 @@ listUl.addEventListener("click", e => {
         ul.insertBefore(nextLi, li);
       }
     }
+
+    // let bold = e.target.previousElementSibling;
+    // if () {
+    //   bold.className = "bold";
+    // }
   }
 });
 
@@ -65,11 +92,11 @@ descriptionButton.addEventListener("click", () => {
   descriptionP.innerHTML = descriptionInput.value + ":";
   descriptionInput.value = "";
 });
-
 addItemButton.addEventListener("click", () => {
   let ul = document.getElementsByTagName("ul")[0];
   let li = document.createElement("li");
   li.textContent = addItemInput.value;
+  attachListItemButtons(li);
   ul.appendChild(li);
   addItemInput.value = "";
 });
