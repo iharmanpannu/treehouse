@@ -47,18 +47,21 @@ ul.addEventListener("click", e => {
     const button = e.target;
     const li = button.parentNode;
     const ul = li.parentNode;
-
+    const input = document.createElement("input");
+    const span = li.firstElementChild;
     if (button.textContent === "remove") {
       ul.removeChild(li);
     } else if (button.textContent === "edit") {
-      const span = li.firstElementChild;
-      const input = document.createElement("input");
+      // const span = li.firstElementChild;
+
       input.type = "text";
       input.value = span.textContent;
       li.insertBefore(input, span);
       li.removeChild(span);
       button.textContent = "save";
     } else if (button.textContent === "save") {
+      span.textContent = input.value;
+      button.textContent = "edit";
     }
   }
 });
