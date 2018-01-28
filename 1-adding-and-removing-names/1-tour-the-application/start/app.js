@@ -1,13 +1,14 @@
 const form = document.getElementById("registrar");
 const input = document.querySelector("input");
 const ul = document.getElementById("invitedList");
+const li = document.createElement("li");
+const removeButton = document.createElement("button");
 
 form.addEventListener("submit", e => {
   e.preventDefault();
   const text = input.value;
   input.value = "";
 
-  const li = document.createElement("li");
   const label = document.createElement("label");
   const checkBox = document.createElement("input");
 
@@ -29,4 +30,10 @@ ul.addEventListener("change", e => {
   checked === true
     ? (listItem.className = "responded")
     : (listItem.className = "");
+});
+
+removeButton.addEventListener("click", e => {
+  removeButton.textContent = "Remove";
+  //   removeButton.type = "submit";
+  li.appendChild(removeButton);
 });
