@@ -1,6 +1,39 @@
 const form = document.getElementById("registrar");
 const input = form.querySelector("input");
 const ul = document.getElementById("invitedList");
+const mainDiv = document.querySelector(".main");
+const div = document.createElement("div");
+const filterLabel = document.createElement("label");
+const filterCheckBox = document.createElement("input");
+
+filterLabel.textContent = "Hide those who haven't responded";
+filterCheckBox.type = "checkbox";
+
+div.appendChild(filterLabel);
+div.appendChild(filterCheckBox);
+
+mainDiv.appendChild(div);
+mainDiv.insertBefore(div, ul);
+
+filterCheckBox.addEventListener("change", e => {
+  const isChecked = e.target.checked;
+  const lis = ul.children;
+  if (isChecked) {
+    for (let i = 0; i < lis.length; i++) {
+      let li = lis[i];
+      if (li.className === "responded") {
+        li.style.display = "";
+      } else {
+        li.style.display = "none";
+      }
+    }
+  } else {
+    for (let i = 0; i < lis.length; i++) {
+      let li = lis[i];
+      li.style.display = "";
+    }
+  }
+});
 
 function createLI(text) {
   const li = document.createElement("li");
@@ -47,21 +80,42 @@ ul.addEventListener("click", e => {
     const button = e.target;
     const li = button.parentNode;
     const ul = li.parentNode;
-    const input = document.createElement("input");
-    const span = li.firstElementChild;
     if (button.textContent === "remove") {
       ul.removeChild(li);
     } else if (button.textContent === "edit") {
-      // const span = li.firstElementChild;
-
+      const span = li.firstElementChild;
+      const input = document.createElement("input");
       input.type = "text";
       input.value = span.textContent;
       li.insertBefore(input, span);
       li.removeChild(span);
       button.textContent = "save";
     } else if (button.textContent === "save") {
-      span.textContent = input.value;
+      const input = li.firstElementChild;
+      const newSpan = document.createElement("span");
+      newSpan.textContent = input.value;
+      li.insertBefore(newSpan, input);
+      li.removeChild(input);
       button.textContent = "edit";
+    }
+  }
+});
+
+const laws = document.getElementsByTagName("li");
+const indexText = document.getElementById("boldIndex");
+const button = document.getElementById("embolden");
+
+button.addEventListener("click", e => {
+  const index = parseInt(indexText.value, 10);
+
+  for (let i = 0; i < laws.length; i += 1) {
+    let law = laws[i];
+
+    // replace 'false' with a correct test condition on the line below
+    if (index.indexOf(index) === law) {
+      law.style.fontWeight = "bold";
+    } else {
+      law.style.fontWeight = "normal";
     }
   }
 });
