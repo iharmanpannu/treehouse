@@ -7,7 +7,7 @@ $(".spoiler span").hide();
 
 // When the button is pressed
 
-$(".spoiler button").on("click", () => {
+$(".spoiler").on("click", "button", () => {
   // Show the Spoiler
   $(".spoiler span")
     .fadeIn(500)
