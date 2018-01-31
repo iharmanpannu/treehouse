@@ -1,18 +1,20 @@
 const $odd = $("a:odd");
 const $secureLinks = $('a[href^="https://"]');
 const $pdfs = $('a[href$=".pdf"]');
-const $checkBox = $("input").attr("checkbox");
+const $checkbox = $(
+  '<label><input type="checkbox"> Allow PDF downloads</label>'
+);
 
+$("#links").append($checkbox);
 // Add Attributes & Add Classes
 $secureLinks.attr("target", "_blank").addClass("secure");
-$pdfs.attr("download", false).addClass("pdf");
+$pdfs.attr("download", true).addClass("pdf");
 
 $pdfs.on("click", e => {
   //Check to see if the checkbox is checked
-  e.preventDefault();
   // If no prevent user from downloading
-  if ($($checkBox).is(":checked")) {
-    $pdfs.attr("download", true);
+  if ($(":checked").length === 0) {
+    e.preventDefault();
+    alert("Please check the checkbox to allow PDF download");
   }
-  // If yes allow user to download
 });
