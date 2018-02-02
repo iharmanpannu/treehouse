@@ -18,3 +18,5 @@ $pdfs.on("click", e => {
     alert("Please check the checkbox to allow PDF download");
   }
 });
+
+$("a").each(() => {});
