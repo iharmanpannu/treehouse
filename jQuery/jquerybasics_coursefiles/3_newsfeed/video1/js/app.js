@@ -19,6 +19,6 @@ $pdfs.on("click", e => {
   }
 });
 
-$("a").each((index, element) => {
+$("a").each(function(index, element) {
   console.log(index, $(element).attr("href"));
 });
