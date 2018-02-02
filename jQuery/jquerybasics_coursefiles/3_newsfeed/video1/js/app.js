@@ -19,9 +19,15 @@ $pdfs.on("click", e => {
   }
 });
 
-$("a").each(function(index, link) {
-  const url = $(link).attr("href");
-  $(link)
-    .paren()
+// $("a").each(function(index, link) {
+//   const url = $(link).attr("href");
+//   $(link)
+//     .parent()
+//     .append(`(${url})`);
+// });
+$("a").each(function() {
+  const url = $(this).attr("href");
+  $(this)
+    .parent()
     .append(`(${url})`);
 });
