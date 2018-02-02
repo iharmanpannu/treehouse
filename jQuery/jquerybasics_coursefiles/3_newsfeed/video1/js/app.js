@@ -1,11 +1,11 @@
 const $odd = $("a:odd");
 const $secureLinks = $('a[href^="https://"]');
 const $pdfs = $('a[href$=".pdf"]');
-const $checkbox = $(
+const $pdfCheckbox = $(
   '<label><input type="checkbox"> Allow PDF downloads</label>'
 );
 
-$("#links").append($checkbox);
+$("#links").append($pdfCheckbox);
 // Add Attributes & Add Classes
 $secureLinks.attr("target", "_blank").addClass("secure");
 $pdfs.attr("download", true).addClass("pdf");
