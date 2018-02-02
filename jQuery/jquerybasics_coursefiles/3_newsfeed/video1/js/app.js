@@ -20,5 +20,5 @@ $pdfs.on("click", e => {
 });
 
 $("a").each(function(index, element) {
-  console.log(index, $(element).attr("href"));
+  const url = $(link).attr("href");
 });
