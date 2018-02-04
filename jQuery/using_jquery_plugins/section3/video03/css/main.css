@@ -7,24 +7,23 @@
 
 /*Main*/
 
-
-body{
-  color: #B1B9C1;
+body {
+  color: #b1b9c1;
   font-size: 1em;
   font-weight: 200;
-  font-family: 'Roboto', Helvetica, Arial, serif;
+  font-family: "Roboto", Helvetica, Arial, serif;
   width: 100%;
   text-align: center;
   padding-top: 50px;
 }
 
 a {
-  color: #5FB6E1;
+  color: #5fb6e1;
   text-decoration: none;
 }
 
 a:hover {
-  color: #53A4C4;
+  color: #53a4c4;
 }
 
 img {
@@ -41,17 +40,16 @@ ul li {
   padding: 0;
 }
 
-
 /*Typography*/
 p {
   margin-bottom: 40px;
 }
-h1, h2 {
+h1,
+h2 {
   font-weight: 400;
   width: 100%;
 }
 h1 {
-  ;
 }
 h2 {
   font-size: 42px;
@@ -82,7 +80,7 @@ h5 {
   display: block;
   float: left;
   margin: 20px 0;
-  background: url('../img/logo.svg') left center no-repeat;
+  background: url("../img/logo.svg") left center no-repeat;
   background-size: 80px 16px;
 }
 .description {
@@ -100,11 +98,11 @@ nav {
   float: right;
 }
 nav a {
-  transition: .35s linear;
+  transition: 0.35s linear;
   padding: 0 10px;
   font-weight: 500;
   line-height: 60px;
-  color: #B1B9C1;
+  color: #b1b9c1;
   text-align: right;
 }
 nav a:last-child {
@@ -114,21 +112,21 @@ nav a:hover {
   color: #333;
 }
 nav a.active {
-  color: #465058
+  color: #465058;
 }
 
 /*Button*/
 .button {
-  border: 2px solid #D5DDE4;
+  border: 2px solid #d5dde4;
   border-radius: 4px;
   padding: 12px 20px;
-  color: #777B7E;
-  transition: .35s;
+  color: #777b7e;
+  transition: 0.35s;
   font-weight: 400;
 }
 
 .button:hover {
-  border-color: #7CCEEE;
+  border-color: #7cceee;
 }
 
 /*Slides*/
@@ -154,7 +152,7 @@ nav a.active {
 .slide .button {
   color: #fff;
   border-color: #fff;
-  opacity: .6;
+  opacity: 0.6;
 }
 .slide .button:hover {
   opacity: 1;
@@ -164,16 +162,16 @@ nav a.active {
   margin: 100px 50% 100px 10%;
 }
 .blue {
-  background: #3E89BE;
+  background: #3e89be;
 }
 .orange {
-  background: #F8835A;
+  background: #f8835a;
 }
 .green {
-  background: #5ECE7F;
+  background: #5ece7f;
 }
 .yellow {
-  background: #FFD365;
+  background: #ffd365;
 }
 
 /*Footer*/
@@ -192,20 +190,20 @@ footer {
   height: 6px;
   border-radius: 50%;
   border: 10px solid #ccc;
-  opacity: .65;
-  transition: .35s linear;
+  opacity: 0.65;
+  transition: 0.35s linear;
 }
 .social li a:hover {
   opacity: 1;
 }
 .social .pink {
-  border-color: #FF8DB3
+  border-color: #ff8db3;
 }
 .social .light-blue {
-  border-color: #7CCEEE
+  border-color: #7cceee;
 }
 .social .dark-blue {
-  border-color: #3E89BE
+  border-color: #3e89be;
 }
 
 /*Work Page*/
@@ -217,8 +215,6 @@ footer {
 .item {
   margin-bottom: 40px;
 }
-
-
 
 /*Team*/
 .team {
@@ -304,7 +300,7 @@ footer {
   .slide img {
     width: 80%;
     margin: 100px 10%;
-}
+  }
   .frame {
     margin: 40px 0 0;
   }
@@ -324,6 +320,7 @@ footer {
 .header {
   background-color: white;
   transition: 1s;
+  z-index: 10000;
 }
 
 .is-sticky .header {
@@ -336,4 +333,11 @@ footer {
   margin: 0;
 }
 
-
+/*  Slick styles  */
+.slick-dots {
+  bottom: 20px;
+}
+.slick-dots li button:before {
+  font-size: 16px;
+  color: #757575;
+}

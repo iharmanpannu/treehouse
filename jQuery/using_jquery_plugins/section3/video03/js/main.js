@@ -36,7 +36,9 @@ $(".work").on("sticky-end", function() {
 // Slick animations
 
 $(".slides").slick({
-  fade: true,
+  slideIm: true,
   autoplay: true,
-  autoplaySpeed: 1000
+  autoplaySpeed: 3000,
+  arrows: false,
+  dots: true
 });
