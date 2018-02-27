@@ -10,8 +10,18 @@
     let xhr = new XMLHttpRequest();
     xhr.onreadystatechange = () => {
       if (xhr.readyState === 4) {
-        const div = document.querySelector('#ajax');
-        div.innerHTML = xhr.responseText;
+        if (xhr.status === 200) {
+          const div = document.querySelector('#ajax');
+          div.innerHTML = xhr.responseText;
+        } else if (xhr.status === 404) {
+          // Not found
+          console.log('Page not found')
+        } else if (xhr.status === 500) {
+          //  Not found
+          // Do something here
+        } else {
+          alert('Not found')
+        }
       }
     }
     xhr.open('GET', 'sidebar.html');
