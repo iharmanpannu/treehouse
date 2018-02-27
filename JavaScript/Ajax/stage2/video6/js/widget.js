@@ -21,13 +21,17 @@ function showList() {
   xhr.open("GET", "data/employees.json", true);
   xhr.send();
 }
-
 showList();
-
 function showRooms() {
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
-    const rooms = JSON.parse(xhr.responseText);
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      const rooms = JSON.parse(xhr.responseText);
+      rooms.forEach(room => {});
+    }
   };
-  xhr.open("GET", "data/rooms.js");
+  xhr.open("GET", "data/rooms.json");
+  xhr.send();
 }
+
+showRooms();
