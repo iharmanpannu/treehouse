@@ -27,7 +27,19 @@ function showRooms() {
   xhr.onreadystatechange = function() {
     if (xhr.readyState === 4 && xhr.status === 200) {
       const rooms = JSON.parse(xhr.responseText);
-      rooms.forEach(room => {});
+      let status = `<ul>`;
+      rooms.forEach(room => {
+        if (room.available === true) {
+          status += `<li class="full">`;
+        } else {
+          status += `<li class="empty">`;
+        }
+        status += room.name;
+        status += `</li>`;
+      });
+      status += `</ul>`;
+      const div = document.getElementById("roomList");
+      div.innerHTML = status;
     }
   };
   xhr.open("GET", "data/rooms.json");
