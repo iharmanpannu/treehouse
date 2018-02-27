@@ -27,14 +27,14 @@ function showRooms() {
   xhr.onreadystatechange = function() {
     if (xhr.readyState === 4 && xhr.status === 200) {
       const rooms = JSON.parse(xhr.responseText);
-      let status = `<ul>`;
+      let status = `<ul class="rooms">`;
       rooms.forEach(room => {
         if (room.available === true) {
           status += `<li class="full">`;
         } else {
           status += `<li class="empty">`;
         }
-        status += room.name;
+        status += room.room;
         status += `</li>`;
       });
       status += `</ul>`;
