@@ -23,7 +23,8 @@
     // }
 
     function sendAJAX() {
-      $('#ajax').load('sidebar.html');
+      $.get('sidebar.html');
+      // $('#ajax').load('sidebar.html');
       $("#load").hide();
     }
 
