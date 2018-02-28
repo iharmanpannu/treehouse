@@ -46,4 +46,7 @@ function showRooms() {
   xhr.send();
 }
 
-showRooms();
+function loadData() {
+  showList();
+  showRooms();
+}
