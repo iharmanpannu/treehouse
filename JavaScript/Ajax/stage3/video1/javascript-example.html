@@ -22,10 +22,16 @@
     //   document.getElementById('load').style.display = 'none';
     // }
 
+    // function sendAJAX() {
+    //   // $.get('sidebar.html');
+    //   $('#ajax').load('sidebar.html');
+    //   $("#load").hide();
+    // }
     function sendAJAX() {
-      // $.get('sidebar.html');
-      $('#ajax').load('sidebar.html');
-      $("#load").hide();
+      $.get('sidebar.html', function (data) {
+        $("#load").hide();
+        $('#ajax').html(data);
+      })
     }
 
   </script>
