@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  const url = "..data/employees.json"; // url file
+  const url = "data/employees.json"; // url file
 
   $.getJSON(url, function(response) {
     let status = `<ul class="bulleted">`;
@@ -9,6 +9,9 @@ $(document).ready(function() {
       } else {
         status += `<li class="out">`;
       }
+      status += employee.name + "</li>";
     });
+    status += `</ul>`;
+    $("#employeeList").html(status);
   }); // end json
 }); // End ready
