@@ -21,7 +21,7 @@ function showList() {
   xhr.open("GET", "data/employees.json", true);
   xhr.send();
 }
-showList();
+
 function showRooms() {
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
