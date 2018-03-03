@@ -12,5 +12,6 @@ $(document).ready(function() {
     statusHTML += "</ul>";
     $("#employeeList").html(statusHTML);
   }); // end getJSON
-  const $url = $.getJSON();
+  const $url = "../data/rooms.json";
+  $.getJSON();
 }); // end ready
