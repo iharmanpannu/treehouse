@@ -4,11 +4,10 @@
 // let alternativeway = (message as string).endsWith("c");
 // // message = 5;
 // console.log(alternativeway);
-
-// let log = function(message) {
-//   console.log(message);
-// };
-let doLog = message => {
-  message = "hello";
-  console.log(message);
+var log = function (message) {
+    console.log(message);
+};
+var doLog = function (message) {
+    message = "hello";
+    console.log(message);
 };
