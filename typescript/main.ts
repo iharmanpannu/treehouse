@@ -1,5 +1,6 @@
 class Point {
   x: number;
+  //   private x: number; this makes it private
   y: number;
   constructor(x: number, y: number) {
     //   constructor(x?: number, y?: number) { this makes it optional
