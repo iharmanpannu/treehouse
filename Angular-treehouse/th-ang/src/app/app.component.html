@@ -1,0 +1,13 @@
+<div>
+  <h1> {{title}} </h1>
+  <ul>
+    <li *ngFor="let emo of emoji">{{emo}}</li>
+  </ul>
+  <button (click)="changeEmoji()">
+    Click to show
+  </button>
+  <h2>
+    {{activeEmoji}}
+  </h2>
+  <!-- <input type="text" ([ngModel])="expression" placeholder="Type something" /> -->
+</div>
