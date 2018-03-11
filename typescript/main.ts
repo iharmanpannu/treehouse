@@ -1,40 +1,17 @@
-class Point {
-  //   x: number;
-  //   private x: number; this makes it private
-  //   y: number;
-  constructor(private _x?: number, private _y?: number) {
-    //   constructor(x?: number, y?: number) { this makes it optional
-    // this.x = x;
-    // this.y = y;
-  }
-  draw() {
-    console.log(`X: ${this.x} Y: ${this.y}`);
-  }
-
-  //   getDistance(another: Point) {
-  //     // ..
-  //   }
-  //   getX() {
-  //     return this.x;
-  //   }
-
-  //   setX(value) {
-  //     if (value < 0) {
-  //       throw new Error("value cannot be less than  0.");
-  //     }
-  //   }
-
-  // Instead of code above we can use
-  get x() {
-    return this.x;
-  }
-  set y(value) {
-    if (value < 0) throw new Error("value cannot be less than  0.");
-  }
+enum color {
+  Red,
+  Green,
+  Blue
 }
-let point = new Point(1, 2);
-// point.x = 1;
-// point.y = 2;
-// let x = point.getX();
-// point.setX(10);
-point.draw();
+
+let background = color.Blue;
+let message;
+message = 'abc';
+let endswith = (message as string).endsWith('c');
+console.log(endswith);
+let log = function(message) {
+  console.log(message);
+};
+
+let doLog = message => console.log(message);
+doLog('hello');
