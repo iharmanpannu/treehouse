@@ -1,16 +1,15 @@
 class Point {
-  private x: number;
-  b: number;
+  //   private x: number;
+  //   b: number;
 
-  constructor(x?: number, b?: number) {
-    this.x = x;
-    this.b = b;
-  }
+  constructor(private x?: number, private b?: number) {}
 
   print() {
     console.log(`X: ${this.x} B: ${this.b} `);
   }
 }
 let printIt = new Point(2, 3);
-printIt.b = 4;
+
 printIt.print();
+let math = 10 % 90;
+console.log(math);
